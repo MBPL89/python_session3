@@ -1,0 +1,119 @@
+---
+title: "3. Functions - Practice"
+author: "Dr. Piccoli"
+format: live-html
+pyodide:
+    
+  packages:
+    - seaborn
+editor_options: 
+  chunk_output_type: console
+---
+
+```{=html}
+<style>
+/* Target the first tab (Demo) */
+.nav-pills .nav-item:nth-child(1) .nav-link {
+  background-color: #FFC20A; /* Yellow */
+  color: white;
+}
+
+/* Target the second tab (Example) */
+.nav-pills .nav-item:nth-child(2) .nav-link {
+  background-color: #5D3A9B; /* Purple */
+  color: white;
+}
+
+/* Target the third tab (Exercise) */
+.nav-pills .nav-item:nth-child(3) .nav-link {
+  background-color: #0C7BDC; /* Blue */
+  color: white;
+}
+
+/* Target the fourth tab (Activity) */
+.nav-pills .nav-item:nth-child(4) .nav-link {
+  background-color: #E66100; /* Orange */
+  color: white;
+}
+
+/* Target the fifth tab (Activity2) */
+.nav-pills .nav-item:nth-child(5) .nav-link {
+  background-color: #40B0A6; /* teal */
+  color: white;
+}
+
+/* Active tab styling */
+.nav-pills .nav-link.active {
+  background-color: #2E7D32; /* Customize active tab color */
+  color: white;
+}
+</style>
+```
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}} {{< include ./_extensions/r-wasm/live/_gradethis.qmd >}}
+
+```{pyodide}
+#| autorun: true
+#| startover: false
+#| edit: false
+#| runbutton: false
+#| echo: false
+import sys
+from io import StringIO
+
+```
+
+
+
+## Excercises
+
+1) Rewrite the grading program you created in the previous practice by using a function. Then use the function, called `convert_grade` to convert to letter grade every score in the list called `scores`. NB: Your function should not break when it encounters problematic scores. The original program description: write a program to prompt for a score between 0.0 and 1.0. If the score is out of range, print an error message. If the score is between 0.0 and 1.0, print a grade using the following table:
+
+|Score | Grade |
+|------|-------|
+|>= 0.9|A|
+|>= 0.8|B|
+|>= 0.7|C|    
+|>= 0.6|D|
+|< 0.6|F|
+
+Complete the code in the cell below:
+
+```{pyodide}
+#| startover: false
+#| autorun: false
+#| min-lines: 3
+# This is the definition of the convert_grade function
+
+```
+
+```{pyodide}
+#| startover: false
+#| autorun: false
+#| min-lines: 3
+# This is the list of scores to convert
+scores = [0.95, 0.66, 3, 0.75, 1, 0]
+
+# This is the program looping through the scores and printing the
+# letter grade conversion for each one.
+
+```
+
+## Challenge
+
+This is a challenge that uses the skills you develped to this point.  
+
+Write a function named `computations` that takes one parameter named `number`. If the number is even, the function print the text: **The number is even, the result is** followed by the number devided by 2. If the number is odd, the function print the text: **The number is odd, the result is** followed by the result of the expression `3 * number + 1`. 
+
+Using this function, write a program that allows a user to type any **integer** and then keeps calling `computations` until the result is **1**.  
+
+When the result of 1 is obtained (and it will be obtained for any integer), print the message **This computations function is bananas!!** and terminate the program. Make sure to use `try` and `except` to make sure is used to catch input errors (and print a meaningful message for the user).  
+
+Most of all, have fun with this coding challenge!
+
+```{pyodide}
+#| startover: false
+#| autorun: false
+#| min-lines: 3
+
+```

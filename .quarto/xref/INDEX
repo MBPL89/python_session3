@@ -1,0 +1,23 @@
+{
+  "index.qmd": {
+    "index.html": "fe3224be"
+  },
+  "about.qmd": {
+    "about.html": "a01c1536"
+  },
+  "challenge1-functions.qmd": {
+    "challenge1-functions.html": "18fecea3"
+  },
+  "challenge1-functions_solved.qmd": {
+    "challenge1-functions_solved.html": "a17bcd66"
+  },
+  "completed.qmd": {
+    "completed.html": "0309355d"
+  },
+  "p4-functions-solved.qmd": {
+    "p4-functions-solved.html": "4b00874b"
+  },
+  "p4-functions.qmd": {
+    "p4-functions.html": "7ff28a3f"
+  }
+}
