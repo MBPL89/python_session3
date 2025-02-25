@@ -1,5 +1,6 @@
 ---
 title: "3. Functions - Challenge Solved"
+draft: true
 author: "Dr. Piccoli"
 format: live-html
 pyodide:

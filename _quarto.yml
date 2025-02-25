@@ -21,6 +21,10 @@ website:
         
       # - href: https://omis482-f2024-class-website.netlify.app #add your website
       #   text: Go to the Course Website
+  drafts:
+    - p4-functions-solved.qmd
+    - challenge1-functions_solved.qmd
+  draft-mode: gone
 
 format:
   html:
