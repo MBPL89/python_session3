@@ -63,30 +63,9 @@ from io import StringIO
 
 ```
 
-1) **Count Vowels in a String** Create a function `count_vowels(text)` that counts the number of vowels (a, e, i, o, u) in a given string. Use a for loop and conditional statements to accomplish the task.
-
-```{pyodide}
-#| startover: false
-#| autorun: false
-#| min-lines: 3
 
 
-```
-
-
-
-2) **To-Do List Manager** Create a function `add_task(todo_list, task)` that adds a task to a to-do list (list of strings). Then create another `functioremove_task(todo_list, task)` to remove a task if it exists. To test the functions, create a list of 5 things and loop through it, then create a list of two things and remove them. Make sure to use error checking to handle any possible error (e.g., An item to remove is not in the list of added items)
-
-```{pyodide}
-#| startover: false
-#| autorun: false
-#| min-lines: 3
-
-
-```
-
-
-3) This is a challenge that uses the skills you develped to this point
+1) This is a challenge that uses the skills you develped to this point
 
 Write a function named *computations()* that takes one parameter named *number*. If the number is even, the function print the text: **The number is even, the result is** followed by the number devided by 2. If the number is odd, the function print the text: **The number is odd, the result is** followed by the result of the expression 3 \* the number + 1.
 

@@ -133,26 +133,24 @@ Complete the code in the cell below:
 #| autorun: false
 #| min-lines: 3
 # This is the definition of the convert_grade function
-def convert_grade(inp) :
-    try :
-        score = float(inp)
-        
-        # Ensure input score is within acceptable range of values that can be meaningfully converted
-        if score >= 0 and score <= 1 :
-            if score >= 0.9 :
-                print('A')
-            elif score >= 0.8 :
-                print('B')
-            elif score >= 0.7 :
-                print('C')
-            elif score >= 0.6 :
-                print('D')
-            else :
-                print('F')
-        else :
-            print('Error, the score provided is out of acceptable range')
-    except :
-        print('Error, only numbers are allowed as input scores')
+def convert_grade(grade):
+  try:
+    if grade >= 0 and grade <= 1:
+      if grade >= 0.9:
+        print("Your grade is A")
+      elif grade >= 0.8:
+        print("Your grade is B")
+      elif grade >= 0.7:
+        print("Your grade is C")
+      elif grade >= 0.6:
+        print("Your grade is D")
+      else: 
+        print("Your grade is F")
+    else:
+      print("Score out of range")
+  except:
+    print("Only numeric inputs are valid!")
+  
 ```
 
 ```{pyodide}
@@ -160,12 +158,11 @@ def convert_grade(inp) :
 #| autorun: false
 #| min-lines: 3
 # This is the list of scores to convert
-scores = [0.95, 0.66, 3, 0.75, 1, 0, 'test']
-
+scores = ["ciao", 0.95, 0.66, 3, 0.75, 1, 0]
 # This is the program looping through the scores and printing the
 # letter grade conversion for each one.
-for score in scores :
-    convert_grade(score)
+for score in scores:
+  convert_grade(score)
 ```
 
 
@@ -187,14 +184,12 @@ sys.stdin = mock_input
 def celsius_to_fahrenheit(celsius):
     far = (celsius * 9/5) + 32
     return far
-
 # List of Celsius temperatures to convert
 celsius_values = [32, 55, 88]
-
 # Convert each Celsius value to Fahrenheit and print results
 for celsius in celsius_values:
     fahrenheit = celsius_to_fahrenheit(celsius)
-    print(“A temperature of ”, celsius, “ degree Celsius is equivalent to “, fahrenheit, “ degree Fahrenheit.”)
+    print("A temperature of", celsius, "degree Celsius is equivalent to", fahrenheit, "degree Fahrenheit.")
 ```
 
 
@@ -216,13 +211,12 @@ def factorial(n):
         return "Factorial is not defined for negative numbers."
     result = 1
     for i in range(1, n + 1):
-        result *= i
+        result = result * i
     return result
-
 # Test the function with one number
 test_number = 5
 result = factorial(test_number)
-print("The factorial of " + str(test_number) + " is " + str(result))
+print("The factorial of ", test_number, " is ", result)
 
 ```
 
@@ -243,8 +237,11 @@ sys.stdin = mock_input
 #| autorun: false
 #| min-lines: 3
 def generate_invite(name, event):
-    message print("Dear “, name, “ you are invited to the ", event, “!”)
+    message = "Dear " + name + " you are invited to the " + event + "!"
     return message
+name = input("What is the name of the invitee? ")
+event = input("What is the event? ")
+print(generate_invite(name, event))
 
 ```
 
@@ -264,21 +261,19 @@ Note, you need to use the `range()` function. Use help to learn about it.
 # Function to check if a number is prime
 def is_prime(num):
     if num < 2:
-        return False  # Prime numbers are greater than 1
+        return False
     for i in range(2, num):  # Check divisibility from 2 to num-1
         if num % i == 0:
-            return False  # If divisible, it's not prime
+            return False
     return True  # If no divisors found, it's prime
-
 # List of numbers to test
 test_numbers = [10, 23, 99, 113]
-
 # Loop through the list and test each number
 for number in test_numbers:
     if is_prime(number):
-        print(str(number) + " is a prime number.")
+        print(number, "is a prime number.")
     else:
-        print(str(number) + " is not a prime number.")
+        print(number, "is not a prime number.")
 ```
 
 
@@ -291,14 +286,15 @@ for number in test_numbers:
 #| min-lines: 3
 # Function to calculate the sum of a list of numbers
 def sum_list(numbers):
-    total = 0  # Initialize sum
-    for num in numbers:  # Iterate through the list
-        total += num  # Add each number to total
-    return total  # Return the final sum
-
+    total = 0  
+    for num in numbers:
+      try:
+        total = total + num
+      except:
+        continue
+    return total
 # Example list of numbers
-numbers = [3, 7, 2, 8, 10]
-
+numbers = [3, 7, 2, 8, "bad data", 10]
 # Calculate and print the sum
 print("The sum of the list is:", sum_list(numbers))
 
@@ -314,41 +310,14 @@ print("The sum of the list is:", sum_list(numbers))
 #| min-lines: 3
 # Function to format an email address
 def format_email(name, domain):
-    email = name + “@” + domain
+    email = name + "@" + domain
     return email
+email = input("What is the email handle? ")
+domain = input("What is the domain? ")
+print(format_email(email, domain))
 
 ```
 
-
-
-8) **Password Strength Checker**
-Write a function `check_password_strength(password)` that evaluates a password. Then test it on three passwords of your choice. The rules are:
-* If it’s less than 6 characters → "Weak"
-* If it’s between 6-10 characters → "Moderate"
-* If it’s more than 10 characters → "Strong"
-
-
-```{pyodide}
-#| startover: false
-#| autorun: false
-#| min-lines: 3
-# Function to check password strength
-def check_password_strength(password):
-    if len(password) < 6:
-        return "Weak"
-    elif 6 <= len(password) <= 10:
-        return "Moderate"
-    else:
-        return "Strong"
-
-# List of passwords to test
-passwords = ["abc", "myp@ss1", "SuperSecurePassword123"]
-
-# Loop through the list and test each password
-for password in passwords:
-    print("Password:", password, "-> Strength:", check_password_strength(password))
-
-```
 
 
 ```{=html}

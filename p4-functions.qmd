@@ -193,21 +193,6 @@ Note, you need to use the `range()` function. Use help to learn about it.
 
 
 
-8) **Password Strength Checker**
-Write a function `check_password_strength(password)` that evaluates a password. Then test it on three passwords of your choice. The rules are:
-* If it’s less than 6 characters → "Weak"
-* If it’s between 6-10 characters → "Moderate"
-* If it’s more than 10 characters → "Strong"
-
-
-```{pyodide}
-#| startover: false
-#| autorun: false
-#| min-lines: 3
-
-```
-
-
 ```{=html}
 <div>
   {{< include footer.html >}}
