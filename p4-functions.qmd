@@ -181,7 +181,7 @@ Note, you need to use the `range()` function. Use help to learn about it.
 
 
 
-7) **Email Formatter** Write a function `format_email(name, domain)` that takes a name and domain and returns an email address in lowercase.
+7) **Email Formatter** Write a function `format_email(name, domain)` that takes a name and domain and returns an email address in lowercase. Appropriately test it using input.
 
 ```{pyodide}
 #| startover: false
