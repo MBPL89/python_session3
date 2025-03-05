@@ -283,7 +283,7 @@ for number in test_numbers:
 
 
 
-6) **Summation of a List** Write a function `sum_list(numbers)` that takes a list of numbers and returns their sum. Use a for loop to iterate through the list and print the result.
+6) **Summation of a List** Write a function `sum_list(numbers)` that takes a list of numbers and returns their sum. Use a for loop to iterate through the list and print the result. Use error catching to skip any list entry that is not a numeric value.
 
 ```{pyodide}
 #| startover: false

@@ -64,51 +64,31 @@ from io import StringIO
 
 ```
 
-1) This is a challenge that uses the skills you developed to this point
 
-Write a function named *collatz()* that takes one parameter named *number*. If the number is even, the function print the text: **The number is even, the result is** followed by the number divided by 2. If the number is odd, the function print the text: **The number is odd, the result is** followed by the result of the expression 3 \* the number + 1.
 
-Using this function, write a program that allows a user to type any **integer** and then keeps calling *collatz()* until the result is **1**.
-
-When the result of 1 is obtained (and it will be obtained for any integer), print the message **This Collatz sequence is bananas!!** and terminate the program. Make sure to use *try* and *except* to make sure is used to catch input errors (and print a meaningful message for the user).
-
-Most of all, have fun with this coding challenge!
-
-```{pyodide}
-#| autorun: false
-#| min-lines: 3
-mock_input = StringIO("...\n")
-sys.stdin = mock_input
-```
+1) **Count Vowels in a String** Create a function `count_vowels(text)` that counts the number of vowels (a, e, i, o, u) in a given string. Use a for loop and conditional statements to accomplish the task.
 
 ```{pyodide}
 #| startover: false
 #| autorun: false
 #| min-lines: 3
-def computations(number):
-    if number % 2 == 0:
-        result = number // 2
-        print('The number is even %d' %result)
-    else:
-        result = 3 * number + 1
-        print('The number is odd ', result)
-    return result
+# Function to count vowels in a string
+def count_vowels(text):
+    vowels = "aeiouAEIOU"  # Define vowels (both lowercase and uppercase)
+    count = 0  # Initialize counter
 
-data = input('Enter a number to Collatz: ')
-try:
-    data = int(data)
-    if data >= 1:
-        while data != 1:
-            data = computations(data)
-        print('This computations function is bananas!!')
-    else:
-        print('Only positive integers greater than zero can Collatz!')
-except:
-    print('Please enter an integer number')
+    for char in text:  # Loop through each character in the string
+        if char in vowels:  # Check if the character is a vowel
+            count += 1  # Increment count if it's a vowel
+
+    return count  # Return the total count of vowels
+
+# Example usage
+text = "Hello World"
+print("Number of vowels in the text:", count_vowels(text))
+
+
 ```
-
-
-
 
 
 
@@ -154,30 +134,48 @@ print("Final to-do list:", todo_list)
 
 
 
-3) **Count Vowels in a String** Create a function `count_vowels(text)` that counts the number of vowels (a, e, i, o, u) in a given string. Use a for loop and conditional statements to accomplish the task.
+3) This is a challenge that uses the skills you developed to this point
+
+Write a function named *collatz()* that takes one parameter named *number*. If the number is even, the function print the text: **The number is even, the result is** followed by the number divided by 2. If the number is odd, the function print the text: **The number is odd, the result is** followed by the result of the expression 3 \* the number + 1.
+
+Using this function, write a program that allows a user to type any **integer** and then keeps calling *collatz()* until the result is **1**.
+
+When the result of 1 is obtained (and it will be obtained for any integer), print the message **This Collatz sequence is bananas!!** and terminate the program. Make sure to use *try* and *except* to make sure is used to catch input errors (and print a meaningful message for the user).
+
+Most of all, have fun with this coding challenge!
+
+```{pyodide}
+#| autorun: false
+#| min-lines: 3
+mock_input = StringIO("...\n")
+sys.stdin = mock_input
+```
 
 ```{pyodide}
 #| startover: false
 #| autorun: false
 #| min-lines: 3
-# Function to count vowels in a string
-def count_vowels(text):
-    vowels = "aeiouAEIOU"  # Define vowels (both lowercase and uppercase)
-    count = 0  # Initialize counter
+def computations(number):
+    if number % 2 == 0:
+        result = number // 2
+        print('The number is even %d' %result)
+    else:
+        result = 3 * number + 1
+        print('The number is odd ', result)
+    return result
 
-    for char in text:  # Loop through each character in the string
-        if char in vowels:  # Check if the character is a vowel
-            count += 1  # Increment count if it's a vowel
-
-    return count  # Return the total count of vowels
-
-# Example usage
-text = "Hello World"
-print("Number of vowels in the text:", count_vowels(text))
-
-
+data = input('Enter a number to Collatz: ')
+try:
+    data = int(data)
+    if data >= 1:
+        while data != 1:
+            data = computations(data)
+        print('This computations function is bananas!!')
+    else:
+        print('Only positive integers greater than zero can Collatz!')
+except:
+    print('Please enter an integer number')
 ```
-
 
 ```{=html}
 <div>
