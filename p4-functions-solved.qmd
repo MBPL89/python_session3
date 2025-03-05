@@ -168,58 +168,191 @@ for score in scores :
     convert_grade(score)
 ```
 
-## Challenge
 
-This is a challenge that uses the skills you develped to this point.
 
-Write a function named `computations` that takes one parameter named `number`. If the number is even, the function prints the text: **The number is even, the result is** followed by the number devided by 2. If the number is odd, the function prints the text: **The number is odd, the result is** followed by the result of the expression `3 * number + 1`.
+2) **Temperature Conversion Function** Write a function, call it `celsius_to_fahrenheit(celsius)`, that converts a temperature from Celsius to Fahrenheit. Then call the function on three values, using input or a list, to convert the temperature of 0, 12 and 25 Fahrenheit to Celsius.
 
-Using this function, write a program that allows a user to type any **integer** and then keeps calling `computations` until the result is **1**.
-
-When the result of 1 is obtained (and it will be obtained for any integer), print the message **This computations function is bananas!!** and terminate the program. Make sure to use `try` and `except` to catch input errors (and print a meaningful message for the user).
-
-Most of all, have fun with this coding challenge!
+```{pyodide}
+#| autorun: false
+#| min-lines: 3
+mock_input = StringIO("0\n12\n25\n")
+sys.stdin = mock_input
+```
 
 ```{pyodide}
 #| startover: false
 #| autorun: false
 #| min-lines: 3
-# Some preliminary notes:
-#
-# The // in the next line is not necessary. I could have used simple division with /
-# I use a "floor division" that returns an integer (it rounds down to nearest int)
-# It makes the output prettier, but there is not other reason to use it.
-# The same "pretty result" could be achieved wiht result = int(number / 2)
-#
-# The use of 'formatted printing' on the next line is also not necessary. 
-# I could have used print('The number is, ' result).
-# In some cases however it is better to use formatted printing, to avoid a lot of 
-# concatenation and also to make your code more readable.
-#
-# The second is a more 'modern' way to do formatted printing. It suses the f'text and {variables} here' format
-# This syntax allows for concise and readable string formatting in Python, 
-# making it easier to include variables and expressions directly within strings.
+# Function to convert Celsius to Fahrenheit
+def celsius_to_fahrenheit(celsius):
+    far = (celsius * 9/5) + 32
+    return far
 
-# First, create the function definition
-def computations(number):
-    if number % 2 == 0:
-        result = number // 2
-        print('The number is even %d' %result)
-    else:
-        result = 3 * number + 1
-        print(f'The number is odd {result}')
+# List of Celsius temperatures to convert
+celsius_values = [32, 55, 88]
+
+# Convert each Celsius value to Fahrenheit and print results
+for celsius in celsius_values:
+    fahrenheit = celsius_to_fahrenheit(celsius)
+    print(“A temperature of ”, celsius, “ degree Celsius is equivalent to “, fahrenheit, “ degree Fahrenheit.”)
+```
+
+
+
+
+3) **Factorial Calculation Using Loops** Create a function `factorial(n)` that calculates the factorial of a non-negative integer n using a for loop. The factorial of n (denoted as n!) is the product of all positive integers up to n. Test the function with one number. 
+
+:::{.callout-tip}
+Note, you need to research and use the `range()` function. Use help to learn about it.
+:::
+
+```{pyodide}
+#| startover: false
+#| autorun: false
+#| min-lines: 3
+# Function to calculate factorial
+def factorial(n):
+    if n < 0:
+        return "Factorial is not defined for negative numbers."
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
     return result
 
-# Collect input from user and wrap in error catching to stop the program upon non integer digits
-data = input('Enter a number to Collatz: ')
-try:
-    data = int(data)
-    if data >= 1:
-        while data != 1:
-            data = computations(data)
-        print('This computations function is bananas!!')
+# Test the function with one number
+test_number = 5
+result = factorial(test_number)
+print("The factorial of " + str(test_number) + " is " + str(result))
+
+```
+
+
+
+
+4) **Event Invitation Generator** Write a function `generate_invite(name, event)` that takes a person’s name and an event name as inputs and returns a formatted invitation message. Test it using two inputs asking for the name of the invitee and the name of the event.
+
+```{pyodide}
+#| autorun: false
+#| min-lines: 3
+mock_input = StringIO("...\n...\n")
+sys.stdin = mock_input
+```
+
+```{pyodide}
+#| startover: false
+#| autorun: false
+#| min-lines: 3
+def generate_invite(name, event):
+    message print("Dear “, name, “ you are invited to the ", event, “!”)
+    return message
+
+```
+
+
+
+
+5) **Prime Number Checker** Develop a function `is_prime(num)` that checks if a number is prime. A prime number is greater than 1 and has no divisors other than 1 and itself. Use a for loop and conditional statements. Test your function in a loop that tests the following 4 numbers: `[10, 23, 99, 113]` 
+
+:::{.callout-tip}
+Note, you need to use the `range()` function. Use help to learn about it.
+:::
+
+```{pyodide}
+#| startover: false
+#| autorun: false
+#| min-lines: 3
+# Function to check if a number is prime
+def is_prime(num):
+    if num < 2:
+        return False  # Prime numbers are greater than 1
+    for i in range(2, num):  # Check divisibility from 2 to num-1
+        if num % i == 0:
+            return False  # If divisible, it's not prime
+    return True  # If no divisors found, it's prime
+
+# List of numbers to test
+test_numbers = [10, 23, 99, 113]
+
+# Loop through the list and test each number
+for number in test_numbers:
+    if is_prime(number):
+        print(str(number) + " is a prime number.")
     else:
-        print('Only positive integers greater than zero can Collatz!')
-except:
-    print('Please enter an integer number')
+        print(str(number) + " is not a prime number.")
+```
+
+
+
+6) **Summation of a List** Write a function `sum_list(numbers)` that takes a list of numbers and returns their sum. Use a for loop to iterate through the list and print the result.
+
+```{pyodide}
+#| startover: false
+#| autorun: false
+#| min-lines: 3
+# Function to calculate the sum of a list of numbers
+def sum_list(numbers):
+    total = 0  # Initialize sum
+    for num in numbers:  # Iterate through the list
+        total += num  # Add each number to total
+    return total  # Return the final sum
+
+# Example list of numbers
+numbers = [3, 7, 2, 8, 10]
+
+# Calculate and print the sum
+print("The sum of the list is:", sum_list(numbers))
+
+```
+
+
+
+7) **Email Formatter** Write a function `format_email(name, domain)` that takes a name and domain and returns an email address in lowercase.
+
+```{pyodide}
+#| startover: false
+#| autorun: false
+#| min-lines: 3
+# Function to format an email address
+def format_email(name, domain):
+    email = name + “@” + domain
+    return email
+
+```
+
+
+
+8) **Password Strength Checker**
+Write a function `check_password_strength(password)` that evaluates a password. Then test it on three passwords of your choice. The rules are:
+* If it’s less than 6 characters → "Weak"
+* If it’s between 6-10 characters → "Moderate"
+* If it’s more than 10 characters → "Strong"
+
+
+```{pyodide}
+#| startover: false
+#| autorun: false
+#| min-lines: 3
+# Function to check password strength
+def check_password_strength(password):
+    if len(password) < 6:
+        return "Weak"
+    elif 6 <= len(password) <= 10:
+        return "Moderate"
+    else:
+        return "Strong"
+
+# List of passwords to test
+passwords = ["abc", "myp@ss1", "SuperSecurePassword123"]
+
+# Loop through the list and test each password
+for password in passwords:
+    print("Password:", password, "-> Strength:", check_password_strength(password))
+
+```
+
+
+```{=html}
+<div>
+  {{< include footer.html >}}
+</div>
 ```
