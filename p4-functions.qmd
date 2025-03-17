@@ -78,6 +78,7 @@ from io import StringIO
 Complete the code in the cell below:
 
 ```{pyodide}
+#| persist: true
 #| startover: false
 #| autorun: false
 #| min-lines: 3
@@ -86,6 +87,7 @@ Complete the code in the cell below:
 ```
 
 ```{pyodide}
+#| persist: true
 #| startover: false
 #| autorun: false
 #| min-lines: 3
@@ -102,6 +104,7 @@ scores = [0.95, 0.66, 3, 0.75, 1, 0]
 2) **Temperature Conversion Function** Write a function, call it `celsius_to_fahrenheit(celsius)`, that converts a temperature from Celsius to Fahrenheit. Then call the function on three values, using input or a list, to convert the temperature of 0, 12 and 25 Fahrenheit to Celsius.
 
 ```{pyodide}
+#| persist: true
 #| autorun: false
 #| min-lines: 3
 mock_input = StringIO("0\n12\n25")
@@ -109,6 +112,7 @@ sys.stdin = mock_input
 ```
 
 ```{pyodide}
+#| persist: true
 #| startover: false
 #| autorun: false
 #| min-lines: 3
@@ -125,6 +129,7 @@ Note, you need to research and use the `range()` function. Use help to learn abo
 :::
 
 ```{pyodide}
+#| persist: true
 #| startover: false
 #| autorun: false
 #| min-lines: 3
@@ -144,6 +149,7 @@ sys.stdin = mock_input
 ```
 
 ```{pyodide}
+#| persist: true
 #| startover: false
 #| autorun: false
 #| min-lines: 3
@@ -160,6 +166,7 @@ Note, you need to use the `range()` function. Use help to learn about it.
 :::
 
 ```{pyodide}
+#| persist: true
 #| startover: false
 #| autorun: false
 #| min-lines: 3
@@ -172,6 +179,7 @@ Note, you need to use the `range()` function. Use help to learn about it.
 6) **Summation of a List** Write a function `sum_list(numbers)` that takes a list of numbers and returns their sum. Use a for loop to iterate through the list and print the result. Use error catching to skip any list entry that is not a numeric value.
 
 ```{pyodide}
+#| persist: true
 #| startover: false
 #| autorun: false
 #| min-lines: 3
@@ -184,6 +192,7 @@ Note, you need to use the `range()` function. Use help to learn about it.
 7) **Email Formatter** Write a function `format_email(name, domain)` that takes a name and domain and returns an email address in lowercase. Appropriately test it using input.
 
 ```{pyodide}
+#| persist: true
 #| startover: false
 #| autorun: false
 #| min-lines: 3

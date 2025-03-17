@@ -83,6 +83,7 @@ sys.stdin = mock_input
 ```
 
 ```{pyodide}
+#| persist: true
 #| startover: false
 #| autorun: false
 #| min-lines: 3
