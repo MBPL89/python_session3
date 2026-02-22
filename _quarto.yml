@@ -13,11 +13,11 @@ website:
       - text: "Practice"
         menu:
         - p4-functions.qmd
-        - p4-functions-solved.qmd
+        #- p4-functions-solved.qmd
       - text: "Challenge"
         menu:
         - challenge1-functions.qmd
-        - challenge1-functions_solved.qmd
+        #- challenge1-functions_solved.qmd
         
       # - href: https://omis482-f2024-class-website.netlify.app #add your website
       #   text: Go to the Course Website

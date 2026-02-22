@@ -1,6 +1,6 @@
 ---
 title: "3. Functions - Challenge Solved"
-#draft: true
+draft: true
 author: "Dr. Piccoli"
 format: live-html
 pyodide:
@@ -64,9 +64,7 @@ from io import StringIO
 
 ```
 
-
-
-1) This is a challenge that uses the skills you developed to this point
+1)  This is a challenge that uses the skills you developed to this point
 
 Write a function named *collatz()* that takes one parameter named *number*. If the number is even, the function print the text: **The number is even, the result is** followed by the number divided by 2. If the number is odd, the function print the text: **The number is odd, the result is** followed by the result of the expression 3 \* the number + 1.
 
