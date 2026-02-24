@@ -63,9 +63,7 @@ from io import StringIO
 
 ```
 
-
-
-1) This is a challenge that uses the skills you develped to this point
+1)  This is a challenge that uses the skills you develped to this point
 
 Write a function named *computations()* that takes one parameter named *number*. If the number is even, the function print the text: **The number is even, the result is** followed by the number devided by 2. If the number is odd, the function print the text: **The number is odd, the result is** followed by the result of the expression 3 \* the number + 1.
 

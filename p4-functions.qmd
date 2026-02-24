@@ -99,9 +99,7 @@ scores = [0.95, 0.66, 3, 0.75, 1, 0]
 
 ```
 
-
-
-2) **Temperature Conversion Function** Write a function, call it `celsius_to_fahrenheit(celsius)`, that converts a temperature from Celsius to Fahrenheit. Then call the function on three values, using input or a list, to convert the temperature of 0, 12 and 25 Fahrenheit to Celsius.
+2)  **Temperature Conversion Function** Write a function, call it `celsius_to_fahrenheit(celsius)`, that converts a temperature from Celsius to Fahrenheit. Then call the function on three values, using input or a list, to convert the temperature of 0, 12 and 25 Fahrenheit to Celsius.
 
 ```{pyodide}
 #| persist: true
@@ -120,11 +118,9 @@ sys.stdin = mock_input
 
 ```
 
+3)  **Factorial Calculation Using Loops** Create a function `factorial(n)` that calculates the factorial of a non-negative integer n using a for loop. The factorial of n (denoted as n!) is the product of all positive integers up to n. Test the function with one number.
 
-
-3) **Factorial Calculation Using Loops** Create a function `factorial(n)` that calculates the factorial of a non-negative integer n using a for loop. The factorial of n (denoted as n!) is the product of all positive integers up to n. Test the function with one number. 
-
-:::{.callout-tip}
+::: callout-tip
 Note, you need to research and use the `range()` function. Use help to learn about it.
 :::
 
@@ -137,9 +133,7 @@ Note, you need to research and use the `range()` function. Use help to learn abo
 
 ```
 
-
-
-4) **Event Invitation Generator** Write a function `generate_invite(name, event)` that takes a person’s name and an event name as inputs and returns a formatted invitation message. Test it using two inputs asking for the name of the invitee and the name of the event.
+4)  **Event Invitation Generator** Write a function `generate_invite(name, event)` that takes a person’s name and an event name as inputs and returns a formatted invitation message. Test it using two inputs asking for the name of the invitee and the name of the event.
 
 ```{pyodide}
 #| autorun: false
@@ -157,11 +151,9 @@ sys.stdin = mock_input
 
 ```
 
+5)  **Prime Number Checker** Develop a function `is_prime(num)` that checks if a number is prime. A prime number is greater than 1 and has no divisors other than 1 and itself. Use a for loop and conditional statements. Test your function in a loop that tests the following 4 numbers: `[10, 23, 99, 113]`
 
-
-5) **Prime Number Checker** Develop a function `is_prime(num)` that checks if a number is prime. A prime number is greater than 1 and has no divisors other than 1 and itself. Use a for loop and conditional statements. Test your function in a loop that tests the following 4 numbers: `[10, 23, 99, 113]` 
-
-:::{.callout-tip}
+::: callout-tip
 Note, you need to use the `range()` function. Use help to learn about it.
 :::
 
@@ -174,9 +166,7 @@ Note, you need to use the `range()` function. Use help to learn about it.
 
 ```
 
-
-
-6) **Summation of a List** Write a function `sum_list(numbers)` that takes a list of numbers and returns their sum. Use a for loop to iterate through the list and print the result. Use error catching to skip any list entry that is not a numeric value.
+6)  **Summation of a List** Write a function `sum_list(numbers)` that takes a list of numbers and returns their sum. Use a for loop to iterate through the list and print the result. Use error catching to skip any list entry that is not a numeric value.
 
 ```{pyodide}
 #| persist: true
@@ -187,9 +177,7 @@ Note, you need to use the `range()` function. Use help to learn about it.
 
 ```
 
-
-
-7) **Email Formatter** Write a function `format_email(name, domain)` that takes a name and domain and returns an email address in lowercase. Appropriately test it using input.
+7)  **Email Formatter** Write a function `format_email(name, domain)` that takes a name and domain and returns an email address in lowercase. Appropriately test it using input.
 
 ```{pyodide}
 #| persist: true
@@ -199,8 +187,6 @@ Note, you need to use the `range()` function. Use help to learn about it.
 
 
 ```
-
-
 
 ```{=html}
 <div>
